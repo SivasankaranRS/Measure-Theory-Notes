@@ -5,9 +5,8 @@ $$\mu_0 : \mathcal{A} \longrightarrow [0, \infty], \sigma\text{-additive (a pre-
 $$\mu : \mathcal{M} \longrightarrow [0, \infty), \text{measure}$$
 
 - $\mathcal{A} \subseteq \mathcal{F}(\mathcal{A}) \subseteq \mathcal{M}$
-    
 
-# Theorem 1
+# Theorem
 
 Let $\mu_0$ be a pre-measure on an algebra $\mathcal{A}$ i.e., $\mu_0$ is a $\sigma$-additive set function on $\mathcal{A}$. Then there exists a measure $\mu$ on $\mathcal{F}(\mathcal{A})$ whose restriction to $\mathcal{A}$ is $\mu_0$. If $\nu$ is another measure on $\mathcal{F}(\mathcal{A})$ that extends $\mu_0$ then
 
@@ -113,7 +112,7 @@ Recall
 $$\mathcal{L} = \{ (a, b] : -\infty \leq a \leq b \leq \infty \}$$
 
 where interpret $(a, \infty]$ as $(a, \infty), [a, a]$ as $\emptyset$ for $a \in \mathbb{R}$.
-
+ 
 Define $\lambda_F : \mathcal{L} \to [0, \infty]$ by
 
 $$\lambda_F((a, b]) = F(b) - F(a)$$
@@ -130,7 +129,7 @@ Let $\{ (a_i, b_i] \}_{i=1, \dots, k}$ be disjoint and
 
 $$\bigcup_{i=1}^k (a_i, b_i] \subseteq (a, b], \text{ where } a_i, b_i, a, b \in \overline{\mathbb{R}}.$$
 
-Then $\sum_{i=1}^k \lambda_F((a_i, b_i]) \leq \lambda_F((a, b])$
+Then $$\sum_{i=1}^k \lambda_F((a_i, b_i]) \leq \lambda_F((a, b])$$
 
 ### Proof
 

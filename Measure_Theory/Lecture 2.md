@@ -1,3 +1,4 @@
+From last class, [[Measure-Theory-Notes/Measure_Theory/Lecture 1#^359538|Lecture 1]]
 But there exists no such mapping.
 
 # Vitali's construction
@@ -17,7 +18,6 @@ $$y - z \in \mathbb{Q}$$
 $$x - z \in \mathbb{Q}$$
 
 Example: $\Lambda$ is uncountable.
-
 # Axiom of Choice
 
 Every indexed family $\{ S_i \}_{i \in I}$ of non-empty sets, there exists an indexed set $\{ x_i \}_{i \in I}$ such that $x_i \in S_i$ for every $i \in I$.
@@ -35,7 +35,7 @@ $$\Rightarrow z \in \alpha$$
 
 Define $E = \{ x_\alpha : \alpha \in \Lambda \}$ (well defined subset of $\mathbb{R}$).
 
-(i) $(E + p) \cap (E + q) = \phi$ if $p, q \in \mathbb{Q}, p \neq q$
+1. $(E + p) \cap (E + q) = \phi$ if $p, q \in \mathbb{Q}, p \neq q$
 
 Suppose $z \in (E + p) \cap (E + q)$
 
@@ -51,9 +51,11 @@ $$\Rightarrow \in$$
 
 $\therefore$ The intersection is empty.
 
-(ii) $\bigcup_{p \in \mathbb{Q} \cap (-1, 1)} (E + p) \subseteq [-1, 2]$ ($-1, 2$)?
+2. 
+   $$\bigcup_{p \in \mathbb{Q} \cap (-1, 1)} (E + p) \subseteq [-1, 2] \space\to (-1, 2)?)$$
 
-(iii) $(0, 1) \subseteq \bigcup_{p \in (-1, 1) \cap \mathbb{Q}} (E + p)$
+3. 
+   $$(0, 1) \subseteq \bigcup_{p \in (-1, 1) \cap \mathbb{Q}} (E + p)$$
 
 **NOTE**
 
@@ -89,38 +91,26 @@ $$\Rightarrow 1 \leq \sum_{q \in \mathbb{Q} \cap (-1, 1)} \mu(E) \Rightarrow 1 \
 ___
 Throughout this lecture, $\Omega \neq \emptyset$.
 
-# Definition
+# Definition (Semi-algebra)
 
-1. **Semi-algebra**
-    
-    $S \subseteq \mathcal{P}(\Omega)$ is called a semi-algebra if:
-    
-    (i) $\Omega \in S$
-    
-    (ii) $A \in S, B \in S \Rightarrow A \cap B \in S$ (closed under intersection)
-    
-    (iii) If $E \in S$ then, $\exists A_1, \dots, A_k \in S$ such that $E^c = \bigcup_{j=1}^k A_j$ disjoint
-    
+$S \subseteq \mathcal{P}(\Omega)$ is called a semi-algebra if:    
+1. $\Omega \in S$
+2. $A \in S, B \in S \Rightarrow A \cap B \in S$ (closed under intersection)
+3. If $E \in S$ then, $\exists A_1, \dots, A_k \in S$ such that $E^c = \bigcup_{j=1}^k A_j$ disjoint
 
-Ex: $\Omega = \mathbb{R}$
+
+**Exercise:** $\Omega = \mathbb{R}$
 
 $$S = \{ (a, b] : a \in \mathbb{R}, b \in \mathbb{R} \} \cup \{ (c, \infty) : c \in \mathbb{R} \} \cup \{ (-\infty, d] : d \in \mathbb{R} \} \cup \{ \mathbb{R}, \emptyset \}$$
 
-# Definition
+# Definition (Algebra)
 
-2. **Algebra**
-    
-    $A \subseteq \mathcal{P}(\Omega)$ is called an Algebra if:
-    
-3. $\Omega \in A$
-    
-4. $A, B \in A \Rightarrow A \cup B \in A$ (closed under union)
-    
-5. $A \in A \Rightarrow A^c \in A$ (closed under complement)
-    
-    $$(A \cap B)^c = A^c \cup B^c$$
-    
+$\mathcal{A} \subseteq \mathcal{P}(\Omega)$ is called an Algebra if:
+1. $\Omega \in \mathcal{A}$
+2. $A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A}$ (closed under union)
+3. $A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}$ (closed under complement)
 
+$$(A \cap B)^c = A^c \cup B^c$$
 **NOTE**
 
 Algebra is closed under complements.
@@ -131,43 +121,62 @@ An algebra is closed under intersection.
 
 $$(a, b) = \bigcup_{n=1}^\infty (a, b - \frac{1}{n}]$$
 
-# Definition
-
-($\sigma$-Algebra)
+# Definition ($\sigma$-Algebra)
 
 $\mathcal{F} \subseteq \mathcal{P}(\Omega)$ is called a $\sigma$-Algebra if:
 
-(i) $\Omega \in \mathcal{F}$
-
-(ii) $A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$ (closed under complement)
-
-(iii) If $A_1, A_2, \dots \in \mathcal{F} \Rightarrow \bigcup_{j=1}^\infty A_j \in \mathcal{F}$ (closed under union)
+1. $\Omega \in \mathcal{F}$
+2. $A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$ (closed under complement)
+3. If $A_1, A_2, \dots \in \mathcal{F} \Rightarrow \bigcup_{j=1}^\infty A_j \in \mathcal{F}$ (closed under union)
 ____
 ### Exercise
+1. If $\{ \mathcal{A}_\alpha \}_{\alpha \in I}$ is a family of algebras, then $\bigcap_{\alpha \in I} \mathcal{A}_\alpha$ is also an algebra.
 
-(i) If $\{ \mathcal{A}_\alpha \}_{\alpha \in I}$ is a family of algebras, then $\bigcap_{\alpha \in I} \mathcal{A}_\alpha$ is also an algebra.
+**Contains $\Omega$**
+Since each $\mathcal{A}_\alpha$ is an algebra, $\Omega \in \mathcal{A}_\alpha$ for all $\alpha$.
+Thus, $\Omega \in \bigcap_\alpha \mathcal{A}_\alpha$.
+**Closed under complement**
+If $A \in \bigcap_\alpha \mathcal{A}_\alpha$, then $A \in \mathcal{A}_\alpha$ for all $\alpha$.
+Since each $\mathcal{A}_\alpha$ is an algebra, $A^c \in \mathcal{A}_\alpha$ for all $\alpha$.
+Thus, $A^c \in \bigcap_\alpha \mathcal{A}_\alpha$.
+**Closed under finite union**
+If $A, B \in \bigcap_\alpha \mathcal{A}_\alpha$, then $A, B \in \mathcal{A}_\alpha$ for all $\alpha$.
+Since each $\mathcal{A}_\alpha$ is an algebra, $A \cup B \in \mathcal{A}_\alpha$ for all $\alpha$.
+Thus, $A \cup B \in \bigcap_\alpha \mathcal{A}_\alpha$.
 
-(ii) If $\{ \mathcal{F}_\alpha \}_{\alpha \in I}$ is a family of $\sigma$-Algebras, then $\bigcap_{\alpha \in I} \mathcal{F}_\alpha$ is also a $\sigma$-algebra.
+2. If $\{ \mathcal{F}_\alpha \}_{\alpha \in I}$ is a family of $\sigma$-Algebras, then $\bigcap_{\alpha \in I} \mathcal{F}_\alpha$ is also a $\sigma$-algebra.
 
----
+**Contains $\Omega$**
+For every $\alpha \in I$, $\Omega \in \mathcal{F}_\alpha$ because each $\mathcal{F}_\alpha$ is a $\sigma$-algebra.
+Thus, $\Omega \in \bigcap_{\alpha \in I} \mathcal{F}_\alpha$.
+**Closed under complement**
+If $A \in \bigcap_{\alpha \in I} \mathcal{F}_\alpha$, then $A \in \mathcal{F}_\alpha$ for all $\alpha$.
+Since each $\mathcal{F}_\alpha$ is a $\sigma$-algebra, $A^c \in \mathcal{F}_\alpha$ for all $\alpha$.
+Thus, $A^c \in \bigcap_{\alpha \in I} \mathcal{F}_\alpha$.
+**Closed under countable union**
+Let $A_1, A_2, \dots \in \bigcap_{\alpha \in I} \mathcal{F}_\alpha$. Then for each $\alpha$, $A_n \in \mathcal{F}_\alpha$ for all $n$.
+Since each $\mathcal{F}_\alpha$ is a $\sigma$-algebra, $\bigcup_{n=1}^\infty A_n \in \mathcal{F}_\alpha$ for all $\alpha$.
+Thus, $\bigcup_{n=1}^\infty A_n \in \bigcap_{\alpha \in I} \mathcal{F}_\alpha$.
 
+____
 # Definition
 
-(i) If $C \in \mathcal{P}(\Omega)$, where $C$ is a class of subsets of $\Omega$, then
+1. If $C \subseteq \mathcal{P}(\Omega)$, where $C$ is a class of subsets of $\Omega$, then
 
-$$\mathcal{A}(C) = \bigcap_{\substack{\mathcal{A} \text{ algebra} \\ C \subseteq \mathcal{A}}} \mathcal{A}$$
+$$\mathcal{A}(C) = \bigcap_{\substack{\mathcal{A} \text{ algebra} \space ; \in \mathcal{P}(\Omega)\\ C \subseteq \mathcal{A}}} \mathcal{A}$$
 
 is called the algebra generated by $C$.
+___
 
 **NOTE**
 
 It is the intersection of all algebras on the set $X$ that contains $C$.
+___
 
-(ii) $\mathcal{F}(C) = \bigcap_{\substack{\mathcal{F} \text{ } \sigma \text{-algebra} \\ C \subseteq \mathcal{F}}} \mathcal{F}$
+2. $$\mathcal{F}(C) = \bigcap_{\substack{\mathcal{F} \text{ } \sigma \text{-algebra} \\ C \subseteq \mathcal{F}}} \mathcal{F}$$
 
 ---
-
-### Example
+**Example**
 
 Let $\Omega$ be uncountable. Consider
 

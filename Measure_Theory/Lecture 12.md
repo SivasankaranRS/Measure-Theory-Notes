@@ -1,7 +1,8 @@
 
 ---
 
-**Definition**: Let $(\Omega, \mathcal{F}, \mu)$ be a measurable space. For a non-negative measurable function $f: \Omega \to [0, \infty]$ define
+# Definition 
+Let $(\Omega, \mathcal{F}, \mu)$ be a measurable space. For a non-negative measurable function $f: \Omega \to [0, \infty]$ define
 
 $$\int_{\Omega} f d\mu = \sup \left\{ \int_{\Omega} \phi d\mu : 0 \le \phi \le f, \phi : \Omega \to [0, \infty) \text{ is simple} \right\}$$
 
@@ -11,7 +12,8 @@ $$E_i = \phi^{-1}(\{c_i\})$$
 
 $$\phi = \sum_{i=1}^{k} c_i \chi_{E_i}$$
 
-**Theorem**: Let $(\Omega, \mathcal{F})$ be a measurable space. $f: \Omega \to [0, \infty]$ be a measurable function. Then $\exists$ a sequence $\{f_n\}$ of non-negative simple functions such that
+# Theorem
+Let $(\Omega, \mathcal{F})$ be a measurable space. $f: \Omega \to [0, \infty]$ be a measurable function. Then $\exists$ a sequence $\{f_n\}$ of non-negative simple functions such that
 
 1. $f_n(\omega) \to f(\omega), \forall \omega \in \Omega$
     

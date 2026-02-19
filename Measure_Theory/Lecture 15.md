@@ -25,7 +25,7 @@ $n$ is even, $\int_{\Omega} f_n d\lambda = \int_{\Omega} \chi_A d\lambda = \lamb
 $\implies \lim_{n \to \infty} \int_{\Omega} f_n d\mu = 1$
 
 ---
-# Definition
+# Definition (Almost Everywhere)
 
 Suppose $f, g : \Omega \to \mathbb{R}$ be measurable functions. $f$ is said to satisfy 'property $P$' **almost everywhere** (written as **a.e.**) w.r.t. $\mu$ if $\exists E \in \mathcal{F}$ with $\mu(E) = 0$ and $f$ satisfies the 'property $P$' $\forall x \in E^c$.
 
@@ -55,7 +55,7 @@ If $f$ is a non-negative measurable function, then:
 $$\int_{\Omega} f d\mu = 0 \iff f = 0 \text{ a.e.}$$
 
 ---
-### **Proof**
+**Proof**
 
 Suppose $f$ is zero a.e. then if $\phi$ is a simple function & $0 \le \phi \le f$ then $\phi = 0$ a.e. and so $\int_{\Omega} \phi d\mu = 0$.
 
@@ -73,7 +73,7 @@ $\therefore$ Our assumption is wrong, hence $f = 0$ a.e.
 
 ---
 
-### **Infinite Sum as Lebesgue Integration**
+# Infinite Sum as Lebesgue Integration
 
 Suppose $\{a_n\}$ is a sequence of non-negative real numbers.
 

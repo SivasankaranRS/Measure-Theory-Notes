@@ -1,46 +1,65 @@
-# Carathéodory extension theorem
-
 **Exercise**:- If $\mathcal{S}$ is a semi-algebra then $\mathcal{F}(\mathcal{S}) = \mathcal{F}(\mathcal{A}(\mathcal{S}))$
+
+**Proof.** (The argument actually works for any collection $\mathcal{S}$.)
+
+1. Because $\mathcal{S} \subseteq \mathcal{A}(\mathcal{S})$, monotonicity of the generator gives:
+    
+    $$\sigma(\mathcal{S}) \subseteq \sigma(\mathcal{A}(\mathcal{S}))$$
+    
+2. On the other hand, $\sigma(\mathcal{S})$ is a $\sigma$-algebra containing $\mathcal{S}$. In particular, it is an algebra containing $\mathcal{S}$, so by minimality of $\mathcal{A}(\mathcal{S})$ (the _smallest_ algebra containing $\mathcal{S}$), we have:
+    
+    $$\mathcal{A}(\mathcal{S}) \subseteq \sigma(\mathcal{S})$$
+    
+    Applying $\sigma(\cdot)$ to both sides and using $\sigma(\sigma(\mathcal{S})) = \sigma(\mathcal{S})$ yields:
+    
+    $$\sigma(\mathcal{A}(\mathcal{S})) \subseteq \sigma(\sigma(\mathcal{S})) = \sigma(\mathcal{S})$$
+    
+
+Combining the two inclusions gives the desired equality:
+
+$$\sigma(\mathcal{S}) = \sigma(\mathcal{A}(\mathcal{S}))$$
+$\square$
+____
+
+# Carathéodory extension theorem
 
 Let $\Omega$ be a nonempty set and $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ be an algebra
 
-Let $\mu : \mathcal{A} \to [0, \infty)$
+Let $\mu : \mathcal{A} \to [0, \infty)$ be a measure i.e.,  $\mu$ is $\sigma$-additive such that $$\nu(E) = \mu(E), \forall E \in \mathcal{A}$$$$A = \bigcup_{i=1}^{n} A_i,\space A_i \in \mathcal{S} \text{ and } A_i \cap A_j = \emptyset$$$$\mu(A) = \sum \mu(A_i)\;;\;A \in \mathcal{A}(\mathcal{S})$$
+____
+def given from online 
+Let $\Omega$ be a nonempty set and $\mathcal{S} \subseteq \mathcal{P}(\Omega)$ be a **semi-algebra**.
 
-be a measure i.e., $\mu$ is $\sigma$-additive.
+Let $\mu : \mathcal{S} \to [0, \infty]$ be a set function that is $\sigma$-additive on $\mathcal{S}$. There exists a unique measure $\nu$ on the generated algebra $\mathcal{A}(\mathcal{S})$ such that:
 
-such that $\nu(E) = \mu(E), \forall E \in \mathcal{A}$
+$$\nu(E) = \mu(E), \quad \forall E \in \mathcal{S}$$
 
-$A \in \mathcal{A}(\mathcal{S})$
+For any $A \in \mathcal{A}(\mathcal{S})$, we can write $A$ as a finite disjoint union:
 
-$A = \bigcup_{i=1}^{n} A_i, A_i \in \mathcal{S}$ and $A_i \cap A_j = \emptyset$
+$$A = \bigcup_{i=1}^{n} A_i, \quad A_i \in \mathcal{S} \text{ and } A_i \cap A_j = \emptyset \text{ for } i \neq j$$
 
-$\mu(A) = \sum \mu(A_i)$
+The measure on the algebra is then given by:
 
-# Outer measure
+$$\nu(A) = \sum_{i=1}^{n} \mu(A_i), \quad A \in \mathcal{A}(\mathcal{S})$$
 
+___
+## Outer measure
 An outer measure on $\Omega$ is a function
 
 $$\lambda : \mathcal{P}(\Omega) \to [0, \infty]$$
 
 satisfies
 
-i) $\lambda(\emptyset) = 0$
-
-ii) $\lambda(E) \leq \lambda(F)$ if $E \subseteq F \subseteq \Omega$
-
-iii) for every $\{ A_n \}_{n \geq 1} \subseteq \mathcal{P}(\Omega)$,
-
-$$\lambda \left( \bigcup_{n \geq 1} A_n \right) \leq \sum_{n \geq 1} \lambda(A_n)$$
-
-($\sigma$-subadditive)
+1. $\lambda(\emptyset) = 0$
+2. $\lambda(E) \leq \lambda(F)$ if $E \subseteq F \subseteq \Omega$
+3. for every $\{ A_n \}_{n \geq 1} \subseteq \mathcal{P}(\Omega)$,
+   $$\lambda \left( \bigcup_{n \geq 1} A_n \right) \leq \sum_{n \geq 1} \lambda(A_n)$$($\sigma$-subadditive)
 
 
-Define $\mu^*(A) = \text{inf} \{ \sum_{j=1}^{\infty} \mu(E_j) : E_j \in \mathcal{A}, \forall j, A \subseteq \bigcup_{j=1}^{\infty} E_j \}$
-
+Define $$\mu^*(A) = \text{inf} \{ \sum_{j=1}^{\infty} \mu(E_j) : E_j \in \mathcal{A}, \forall j, A \subseteq \bigcup_{j=1}^{\infty} E_j \}$$
 ## Lemma 1
 
 $\mu^*$ is an outer measure.
-
 ### Proof
 
 Obviously, $\mu^*(\emptyset) = 0$
@@ -70,6 +89,7 @@ $$\leq \sum_{j=1}^{\infty} \mu^*(A_j) + \varepsilon$$
 Since $\varepsilon > 0$ (arbitrary),
 
 $$\mu^*(A) \leq \sum_{j=1}^{\infty} \mu^*(A_j)$$
+___
 Define,
 
 $$\mathcal{M} = \{ A \in \mathcal{P}(\Omega) \mid \mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c) \quad \forall E \in \mathcal{P}(\Omega) \}$$
@@ -91,16 +111,10 @@ $\mathcal{A} \subseteq \mathcal{M}$
 ### Proof
 
 Take $A \in \mathcal{A}$ and $E \subseteq \Omega$ with $\mu^*(E) < \infty$
-
 Given $\varepsilon > 0, \exists \{ E_j \} \subseteq \mathcal{A}$ such that $E \subseteq \bigcup_{j=1}^{\infty} E_j$
-
 and
-
 $$\mu^*(E) \leq \sum_{j=1}^{\infty} \mu(E_j) \leq \mu^*(E) + \varepsilon$$
-
-Since $A \cap E_j \subseteq \mathcal{A}$ and $\{ A^c \cap E_j \}$ are
-
-covers of $E \cap A$ and $A^c \cap E$ respectively.
+Since $A \cap E_j \subseteq \mathcal{A}$ and $\{ A^c \cap E_j \}$ are covers of $E \cap A$ and $A^c \cap E$ respectively.
 
 $$\mu^*(E \cap A) + \mu^*(E \cap A^c) \leq \sum_{j \geq 1} \mu(E_j \cap A) + \sum_{j \geq 1} \mu(E_j \cap A^c)$$
 

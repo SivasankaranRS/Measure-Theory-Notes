@@ -71,9 +71,9 @@ $$= \sum_{i=1}^k c_i \mu \left( \bigcup_{j=1}^\infty (E_i \cap A_j) \right)$$
 
 (Complete the proof)
 
-### Monotone Convergence Theorem
+# Monotone Convergence Theorem
 
-**Thm**: Let $0 \le f_1 \le f_2 \le \dots$ be a sequence of non-negative measurable functions and let $f = \lim_{n \to \infty} f_n$. Then
+Let $0 \le f_1 \le f_2 \le \dots$ be a sequence of non-negative measurable functions and let $f = \lim_{n \to \infty} f_n$. Then
 
 $$\int_{\Omega} f d\mu = \lim_{n \to \infty} \int_{\Omega} f_n d\mu$$
 
@@ -96,14 +96,15 @@ $$\implies \int f = 0$$
 
 ---
 
-**Proposition**: If $f$ and $g$ are two non-negative measurable functions then
+## Proposition
+If $f$ and $g$ are two non-negative measurable functions then
 
 1. $\int_{\Omega} (f + \alpha g) d\mu = \int_{\Omega} f d\mu + \alpha \int_{\Omega} g d\mu, \alpha \ge 0$
     
 2. If $f \le g$ then $\int_{\Omega} f d\mu \le \int_{\Omega} g d\mu$
     
 
-**Prop Proof**: ii) $\int_{\Omega} f d\mu = \sup \{ \int_{\Omega} \phi d\mu : \phi \text{ is simple}, 0 \le \phi \le f \}$
+**Proof**: ii) $\int_{\Omega} f d\mu = \sup \{ \int_{\Omega} \phi d\mu : \phi \text{ is simple}, 0 \le \phi \le f \}$
 
 $$\le \sup \{ \int_{\Omega} \psi d\mu : \psi \text{ is simple}, 0 \le \psi \le g \}$$
 

@@ -60,7 +60,7 @@ Take limit $\alpha \to 1$. $\blacksquare$
 
 ---
 
-## Preposition
+## Proposition
 Suppose $f, g$ are two measurable functions and non-negative functions. Then
 
 $$\int_{\Omega} (\alpha f + g) d\mu = \alpha \int_{\Omega} f d\mu + \int_{\Omega} g d\mu$$

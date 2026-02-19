@@ -2,9 +2,9 @@
 
 Suppose $(\Omega, \mathcal{F}, \mu)$ is a **complete measure space**. Suppose $f: \Omega \to \mathbb{\bar{R}}$ and $g: \Omega \to \mathbb{\bar{R}}$ are s.t. $f = g$ a.e. (almost everywhere). Then if $f$ is measurable, $g$ is also measurable.
 
-### Proof
+**Proof**
 
-Let $A \in \mathcal{B}_{\mathbb{\bar{R}}}$. Then $f^{-1}(A) \in \mathcal{F}$. Consider $g^{-1}(A) = \{\omega \in \Omega : g(\omega) \in A\}$.
+Let $A \in \mathcal{B}_{\mathbb{\bar{R}}}$. Then $f^{-1}(A) \in \mathcal{F}$. Consider $$g^{-1}(A) = \{\omega \in \Omega : g(\omega) \in A\}$$.
 
 Since $f = g$ a.e., there exists $E \in \mathcal{F}$ s.t. $\mu(E) = 0$, and if $F \subseteq E \implies F \in \mathcal{F}$.
 
@@ -17,15 +17,15 @@ $$= \left( \{\omega \in \Omega : g(\omega) \in A\} \cap E \right) \cup \left( \{
 ---
 Suppose $E \in \mathcal{F}$ s.t. $\mu(E) = 0$ and $g(x) = f(x) \forall x \in E^c$.
 
-$= \left( \{ \omega \in \Omega \mid g(\omega) \in A \} \cap E \right) \cup \left( \{ \omega \in \Omega \mid f(\omega) \in A \} \cap E^c \right)$
+$$= \left( \{ \omega \in \Omega \mid g(\omega) \in A \} \cap E \right) \cup \left( \{ \omega \in \Omega \mid f(\omega) \in A \} \cap E^c \right)$$
 
-$= \left( \{ \omega \in \Omega \mid g(\omega) \in A \} \cap E \right) \cup \left( f^{-1}(A) \cap E^c \right)$
+$$= \left( \{ \omega \in \Omega \mid g(\omega) \in A \} \cap E \right) \cup \left( f^{-1}(A) \cap E^c \right)$$
 
 Since $(\Omega, \mathcal{F}, \mu)$ is complete, $\{ \omega \in \Omega \mid g(\omega) \in A \} \cap E \in \mathcal{F}$
 
 and by the measure $E^c \in \mathcal{F}$
 
-$\implies g^{-1}(A) \in \mathcal{F}$
+$$\implies g^{-1}(A) \in \mathcal{F}$$
 
 Remark:- If $(\Omega, \mathcal{F}, \mu)$ is not complete then the proposition may not hold.
 
@@ -39,7 +39,8 @@ But $f$ is not Borel measurable { Borel measurable $\to f^{-1}(F) \in \mathcal{B
 
 in $f(\{1\}) = F \notin \mathcal{B}_{\mathbb{R}}$
 
-Definition:- Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f: \Omega \to \mathbb{\bar{R}}$ be measurable. Then $f$ is said to be Lebesgue integrable (or just integrable) if
+# Definition
+Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f: \Omega \to \mathbb{\bar{R}}$ be measurable. Then $f$ is said to be Lebesgue integrable (or just integrable) if
 
 $$\int_{\Omega} f^+ d\mu < \infty \ \text{ \& } \int_{\Omega} f^- d\mu < \infty.$$
 
@@ -48,13 +49,13 @@ In this case, the Lebesgue integrable of $f$ is defined as
 $$\int_{\Omega} f d\mu = \int_{\Omega} f^+ d\mu - \int_{\Omega} f^- d\mu.$$
 Proposition:- If $f, g: \Omega \to \bar{\mathbb{R}}$ are integrable and $A, B \in \mathcal{F}$ are disjoint. Then $f$ is integrable on $A$, $f+g$ (when well-defined) and $|f|$ are integrable and
 
-i) $\int_{\Omega} (cf+g) d\mu = c\int_{\Omega} f d\mu + \int_{\Omega} g d\mu, \quad c \in \mathbb{R}$
+i) $$\int_{\Omega} (cf+g) d\mu = c\int_{\Omega} f d\mu + \int_{\Omega} g d\mu, \quad c \in \mathbb{R}$$
 
-ii) $\int_{A \cup B} f d\mu = \int_{A} f d\mu + \int_{B} f d\mu$
+ii) $$\int_{A \cup B} f d\mu = \int_{A} f d\mu + \int_{B} f d\mu$$
 
 iii) $f$ is finite a.e.
 
-iv) $|\int_{\Omega} f d\mu| \le \int_{\Omega} |f| d\mu$
+iv) $$|\int_{\Omega} f d\mu| \le \int_{\Omega} |f| d\mu$$
 
 v) If $f \ge g$ then $\int_{\Omega} f d\mu \ge \int_{\Omega} g d\mu$
 

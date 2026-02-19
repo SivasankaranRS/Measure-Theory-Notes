@@ -1,16 +1,17 @@
 
 **Remark:**
 
-1. Any simple fn is measurable.
+1. Any simple function is measurable.
     
-2. $f$ is simple iff range of $f$ is finite & $f$ is measurable.
+2. $f$ is simple $\implies$ range of $f$ is finite & $f$ is measurable.
     
 
 If range $(f) = \{d_1, \dots, d_k\}$ then we take $E_i = f^{-1}(\{d_i\})$ & $f = \sum_{i=1}^{k} d_{i} \chi_{E_i}$.
 
 ---
 
-**Definition:** Let $(\Omega, \mathcal{F}, \mu)$ be a non-negative measure space & $f$ is a non-negative simple fn with representation $f = \sum_{i=1}^{n} c_i \chi_{E_i}$.
+# Definition (Simple Function)
+Let $(\Omega, \mathcal{F}, \mu)$ be a non-negative measure space & $f$ is a non-negative simple fn with representation $f = \sum_{i=1}^{n} c_i \chi_{E_i}$.
 
 Then the integral of $f$ wrt $\mu$ is defined as
 

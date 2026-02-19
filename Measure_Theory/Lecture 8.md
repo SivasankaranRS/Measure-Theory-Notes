@@ -16,7 +16,7 @@ ___
 ## Lemma 2
 Suppose 
 $$
-[a,b] \subseteq \bigcup_{i=1}^{k} (a_{i},b_{i});a_{i}<b_{i},\forall i,a<b
+(a,b] \subseteq \bigcup_{i=1}^{k} (a_{i},b_{i}];a_{i}<b_{i},\forall i,a<b
 $$
 Then,
 $$

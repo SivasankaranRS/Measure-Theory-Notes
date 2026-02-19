@@ -81,7 +81,7 @@ Suppose $f: \Omega \times [a,b] \to \mathbb{R}$, where $-\infty < a < b < \infty
 
 and $f(\cdot, t)(x) := f(x, t)$ is integrable for each $t \in [a,b]$
 
-and let $F(t) = \int_{\Omega} f(x, t) d\mu(x)$
+and let $$F(t) = \int_{\Omega} f(x, t) d\mu(x)$$
 
 a) If there exist an integrable fn $g$ st
 

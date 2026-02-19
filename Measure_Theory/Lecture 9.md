@@ -6,7 +6,7 @@ If $\bigcup_{i=1}^{\infty} (a_i, b_i] = (a, b]$ with $a, b \in \mathbb{R}$ then
 
 $$\lambda_F((a, b]) = \sum_{i=1}^{\infty} \lambda_F((a_i, b_i]).$$
 
-## Case 2: $b = \infty$
+**Case 2: $b = \infty$**
 
 For any integer $n > a$, we have
 
@@ -30,8 +30,8 @@ Applying *Lemma 3*,
 
 $$\begin{align*} \sum_{i=1}^{\infty} \lambda_F((a_i, b_i] \cap (-\infty, n]) &\uparrow \sum_{i=1}^{\infty} \lambda_F((a_i, b_i]) \\ &= \lambda_F((a, b]) \end{align*}$$
 
-## Case 3:- $a = -\infty$
-Exercise
+**Case 3:- $a = -\infty$**
+**Exercise**
 # Theorem 
  If $F : \mathbb{R} \to \mathbb{R}$ be increasing, right continuous function then $\exists$ a $\sigma$-algebra $\mathcal{M}_F \supseteq \mathcal{B}_{\mathbb{R}}$ and a unique $\mu_F$ on $\mathcal{M}_F$ such that
 
