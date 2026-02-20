@@ -177,7 +177,7 @@ $f: \Omega \to \overline{\mathbb{R}}$ is measurable if and only if
 
 ---
 
-28-1
+# 28-1
 
 **NOTE**
 
@@ -279,7 +279,7 @@ iii) If $f_n \to f$ pointwise, then $f$ is also measurable.
 
 ---
 
-# Definition
+# Definition (Simple Function)
 
 $f : \Omega \to \mathbb{R}$ is called a simple function if there exists a finite disjoint collection of sets in $\mathcal{F}$ $\{E_i : i = 1, \dots, n\}$ and some real numbers $\{c_i : i = 1, \dots, n\}$,
 

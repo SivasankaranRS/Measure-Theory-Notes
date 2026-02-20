@@ -10,7 +10,7 @@ If range $(f) = \{d_1, \dots, d_k\}$ then we take $E_i = f^{-1}(\{d_i\})$ & $f =
 
 ---
 
-# Definition (Simple Function)
+# Definition 
 Let $(\Omega, \mathcal{F}, \mu)$ be a non-negative measure space & $f$ is a non-negative simple fn with representation $f = \sum_{i=1}^{n} c_i \chi_{E_i}$.
 
 Then the integral of $f$ wrt $\mu$ is defined as
